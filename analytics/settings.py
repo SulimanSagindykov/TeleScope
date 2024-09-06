@@ -28,7 +28,8 @@ SECRET_KEY = env.str('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env.bool('DEBUG')
 
-ALLOWED_HOSTS = ['*f']
+ALLOWED_HOSTS = ['*']
+TOKEN_BOT = env.str('TOKEN_BOT')
 
 # Application definition
 
@@ -39,6 +40,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'analytics.apps.bot',
+    'analytics.apps.management',
 ]
 
 MIDDLEWARE = [
